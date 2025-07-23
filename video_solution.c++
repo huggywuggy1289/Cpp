@@ -37,7 +37,7 @@ string solution(string video_len, string pos, string op_start, string op_end, ve
         if(i == "prev"){
             pos0 = max(0, pos0 - 10);
         }
-        
+
         else if(i == "next"){
             pos0 = min(video_len0, pos0 + 10);
 
@@ -45,6 +45,13 @@ string solution(string video_len, string pos, string op_start, string op_end, ve
             if(video_len0 < 10){
                 pos0 = video_len0; // 현재위치가 동영상 맨끝으로 넘어감
             }
+
+            // 정확한 로직
+            // if(video_len0 - pos0 < 10){
+            //     pos0 = video_len0;
+            // }else{
+            //     pos0 = pos0 + 10;
+            // }
         }
 
         if(isOpening(pos0)){
