@@ -33,19 +33,22 @@ string solution(string video_len, string pos, string op_start, string op_end, ve
 
     // 4단계 사용자의 입력을 나타내는 1차원 문자열 배열 commands가 매개변수로 주어집니다.
     for(string i : commands){
+
         if(i == "prev"){
-            pos0 = max(0, pos0 - 10); // 10초전으로 최솟값 0
+            pos0 = max(0, pos0 - 10);
         }
+        
         else if(i == "next"){
-            // 건너뛴 구간이 오프닝인지 아닌지 검사
-            if(isOpening(pos0)){
-                pos0 = op_end0; // 오프닝이면 자동으로 오프닝끝나는 시점으로 넘어가니까
-            }
+            pos0 = min(video_len0, pos0 + 10);
+
             // 동영상 남은 길이가 10초보다 작으면
             if(video_len0 < 10){
                 pos0 = video_len0; // 현재위치가 동영상 맨끝으로 넘어감
             }
-            pos0 = min(video_len0, pos0+10);
+        }
+
+        if(isOpening(pos0)){
+            pos0 = op_end0;
         }
     }
 
