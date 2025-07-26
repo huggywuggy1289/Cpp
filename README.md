@@ -1,7 +1,8 @@
 # C++ 코딩테스트 준비
 
-게임 개발자 전향을 위한 C++ 알고리즘 문제풀이 기록입니다.  
-매일 최소 2시간, [프로그래머스](https://school.programmers.co.kr/) 문제를 풀이하고 있습니다.
+언리얼을 위한 C++ 알고리즘 문제풀이 기록입니다.
+백준 실버 ->
+[프로그래머스](https://school.programmers.co.kr/) 문제를 풀이하고 있습니다.
 
 참고 블로그: [C++ 기본 문법 정리](https://walwaldev.tistory.com/127)
 
