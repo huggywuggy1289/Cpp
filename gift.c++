@@ -60,7 +60,7 @@ int solution(vector<string> friends, vector<string> gifts) {
     // 이때 auto는 타입을 컴파일러가 자동으로 추론하는 형태
     // & = 참조를 의미
     for(auto& p : nextMonthGifts){
-        answer += max(answer, p.second); // <key, value>중 2번째 값
+        answer = max(answer, p.second); // <key, value>중 2번째 값
     }
     return answer;
 }
