@@ -37,15 +37,14 @@ int solution(vector<int> bandage, int health, vector<vector<int>> attacks) {
         else {
             // 공격 시간과 피해량
             success_t++;
-            x++;
+            hp = min(hp + x, health);
 
-            if(success_t == bandage[0]){  // 연속 시전시간이 t시간과 같아지면
-                hp = min(hp + bandage[2], health); // 최댓값제한 걸기
-                y++;
+            if(success_t == t){  // 연속 시전시간이 t시간과 같아지면
+                hp = min(hp + y, health); // 최댓값제한 걸기
                 success_t = 0;
             }
         }
         time++;
     }
-    return answer;
+    return hp;
 }
