@@ -26,7 +26,7 @@ vector<int> solution(vector<vector<int>> edges) {
     
     // 루트 찾기
     int root = -1;
-    for(int i = 0; i <=1000000; i++){
+    for(int i = 1; i <=1000000; i++){
         // 루트는 진입차수0 이자 진출차수 >=2를 만족
         if(inDegree[i] == 0 && outDegree[i] >= 2){
             root = i;
