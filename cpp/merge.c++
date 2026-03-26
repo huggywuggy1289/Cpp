@@ -9,7 +9,7 @@ void merge(int A[], int p, int q, int r){
     int left = q - p + 1;
     int right = r - q;
 
-    // 왼, 오 임시배열
+    // 요소에 맞게 임시배열사이즈 지정
     int* L = new int[left];
     int* R = new int[right];
 
